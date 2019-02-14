@@ -9,24 +9,9 @@ public class ParallaxEngine {
         this.layers = layers;
     }
 
-    public void setRight(){
+    public void tick(){
         for(int i = 0; i < layers.length; i++)
-            layers[i].setRight();
-    }
-
-    public void setLeft(){
-        for(int i = 0; i < layers.length; i++)
-            layers[i].setLeft();
-    }
-
-    public void stop(){
-        for(int i = 0; i < layers.length; i++)
-            layers[i].stop();
-    }
-
-    public void move(){
-        for(int i = 0; i < layers.length; i++)
-            layers[i].move();
+            layers[i].tick();
     }
 
     public void render(Graphics2D g2d){

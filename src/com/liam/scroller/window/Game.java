@@ -20,7 +20,7 @@ public class Game extends Canvas implements Runnable {
 
     public static int WIDTH, HEIGHT;
 
-    ObjectHandler handler;
+    static ObjectHandler handler;
     Camera cam;
     static Texture texture;
 
@@ -108,10 +108,6 @@ public class Game extends Canvas implements Runnable {
         }
         g.dispose();
         bs.show();
-    }
-
-    public static void renderParalax(Graphics2D g2d, int destX1, int destX2, int srcX1, int srcX2, int y, BufferedImage image){
-        g2d.drawImage(image, destX1, y, destX2, y + image.getHeight(), srcX1, 0, srcX2, image.getHeight(), null);
     }
 
     private void tick() {

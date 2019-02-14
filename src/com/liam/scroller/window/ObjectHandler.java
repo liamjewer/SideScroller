@@ -24,21 +24,15 @@ public class ObjectHandler {
 
         levels[0] = loader.loadImage("/level1.png"); //loading the level
         levels[1] = loader.loadImage("/level2.png"); //loading the level
-        ParallaxLayer back = new ParallaxLayer(Texture.background[0], (int)Math.round((16 * 0.25) * 0.15));
-        ParallaxLayer mid = new ParallaxLayer(Texture.background[1], (int)Math.round((16 * 0.25) * 0.4));
-        ParallaxLayer front = new ParallaxLayer(Texture.background[2], (int)Math.round((16 * 0.25) * 0.75));
+        ParallaxLayer back = new ParallaxLayer(Texture.background[0], 0.1, 0, this);
+        ParallaxLayer mid = new ParallaxLayer(Texture.background[1], 0.3, 0, this);
+        ParallaxLayer front = new ParallaxLayer(Texture.background[2], 0.5, 0, this);
         this.paralaxEngine = new ParallaxEngine(back, mid, front);
         loadImageLevel(levels[0]);
     }
 
     public void tick(){
-        if(Player.isMovingRight())
-            paralaxEngine.setRight();
-        else if(Player.isMovingLeft())
-            paralaxEngine.setLeft();
-        if(Player.isMoving()){
-            paralaxEngine.move();
-        }
+        paralaxEngine.tick();
         for(int i = 0; i < object.size(); i++){
             tempObject = object.get(i);
 

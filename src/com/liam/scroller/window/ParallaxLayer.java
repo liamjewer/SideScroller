@@ -1,46 +1,39 @@
 package com.liam.scroller.window;
 
+import com.liam.scroller.framework.GameObject;
+import com.liam.scroller.framework.ObjectId;
+import com.liam.scroller.objects.Player;
+
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.util.ArrayList;
 
 public class ParallaxLayer {
     private BufferedImage texture;
-    private int x, y;
-    private int width, height;
-    private int dx;
+    private int width;
+    private double speed;
     private int gap;
-    private boolean left, right;
+    private int velX;
+    private int x;
+    private ObjectHandler handler;
 
-    public ParallaxLayer(BufferedImage texture, int dx, int gap){
+    public ParallaxLayer(BufferedImage texture, double speed, int gap, ObjectHandler handler){
         this.texture = texture;
-        this.dx = dx;
         this.gap = gap;
         this.width = texture.getWidth();
-        this.height = texture.getHeight();
-        this.x = this.y = 0;
+        this.speed = speed;
+        this.handler = handler;
     }
 
-    public ParallaxLayer(BufferedImage texture, int dx){
-        this(texture, dx, 0);
-    }
-
-    public void setLeft() {
-        right = false;
-        left = true;
-    }
-
-    public void setRight() {
-        right = true;
-        left = false;
-    }
-
-    public void stop(){
-        right = left = false;
-    }
-
-    public void move(){
-        if(right) x = (x + dx) % (width + gap);
-        else x = (x - dx) % width;
+    public void tick(){
+        if(Player.isMovingLeft()){
+            velX = (int)Math.round(6 * -speed);
+        }else if(Player.isMovingRight()){
+            velX = (int)Math.round(6 * speed);
+        }else{
+            velX = 0;
+        }
+        x += velX;
     }
 
     public void render(Graphics2D g2d){
@@ -57,8 +50,8 @@ public class ParallaxLayer {
             Game.renderParalax(g2d, 0, width + x, -x, width, y, texture);
             Game.renderParalax(g2d, gap + width + x, gap + ObjectHandler.maxX * 32, 0, ObjectHandler.maxX * 32 - width - x, y, texture);
         }*/
-        for(int i = 0; i < ObjectHandler.maxX * 32; i += width){
-            g2d.drawImage(texture, i, 0, null);
-        }
+            for(int i = 0; i < handler.maxX * 64; i += width){
+                g2d.drawImage(texture, i + x, 0, null);
+            }
     }
 }
