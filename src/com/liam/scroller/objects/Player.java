@@ -93,9 +93,11 @@ public class Player extends GameObject {
                 }
                 if(getBoundsRight().intersects(tempObject.getBounds())){
                     x = tempObject.getX() - width;
+                    ismoving = false;
                 }
                 if(getBoundsLeft().intersects(tempObject.getBounds())){
                     x = tempObject.getX() + width;
+                    ismoving = false;
                 }
             }else if(tempObject.getId() == ObjectId.Portal){
                 //switch levels

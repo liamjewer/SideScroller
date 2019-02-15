@@ -30,7 +30,7 @@ public class ParallaxLayer {
     }
 
     public void tick(){
-        if(Camera.isMoving ) {
+        if(Camera.isMoving && Player.isMoving()) {
             if (Player.isMovingLeft()) {
                 velX = -speed;
             } else if (Player.isMovingRight()) {
