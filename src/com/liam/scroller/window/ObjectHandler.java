@@ -24,11 +24,11 @@ public class ObjectHandler {
 
         levels[0] = loader.loadImage("/level1.png"); //loading the level
         levels[1] = loader.loadImage("/level2.png"); //loading the level
-        ParallaxLayer back = new ParallaxLayer(Texture.background[0], 0.1, 0, this);
-        ParallaxLayer mid = new ParallaxLayer(Texture.background[1], 0.3, 0, this);
-        ParallaxLayer front = new ParallaxLayer(Texture.background[2], 0.5, 0, this);
-        this.paralaxEngine = new ParallaxEngine(back, mid, front);
         loadImageLevel(levels[0]);
+        ParallaxLayer back = new ParallaxLayer(Texture.background[0], 0.033, 0, this); //clouds
+        ParallaxLayer mid = new ParallaxLayer(Texture.background[1], 0.066, 0, this); //mountains
+        ParallaxLayer front = new ParallaxLayer(Texture.background[2], 0.1, 0, this); //hills
+        this.paralaxEngine = new ParallaxEngine(back, mid, front);
     }
 
     public void tick(){
