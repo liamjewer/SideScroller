@@ -1,7 +1,5 @@
 package com.liam.scroller.window;
 
-import com.liam.scroller.framework.GameObject;
-import com.liam.scroller.framework.ObjectId;
 import com.liam.scroller.objects.Player;
 
 import java.awt.*;
@@ -24,7 +22,7 @@ public class ParallaxLayer {
         this.speed = speed;
         this.handler = handler;
 
-        for(double i = 0; i < ObjectHandler.maxX * 32; i += width){
+        for(double i = 0; i < ObjectHandler.maxX * 32 + width; i += width){
             x.add(i);
         }
     }

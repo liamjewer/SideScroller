@@ -7,9 +7,9 @@ public class Button {
     private int width, height;
     private float x, y;
     private boolean filled;
-    Color color;
+    Color color, textColor;
     String string;
-    public Button(float x, float y, int width, int height, boolean filled, String string, Color color, ButtonID id){
+    public Button(float x, float y, int width, int height, boolean filled, String string, Color color, Color textColor, ButtonID id){
         this.x = x;
         this.y = y;
         this.width = width;
@@ -17,14 +17,26 @@ public class Button {
         this.filled = filled;
         this.id = id;
         this.color = color;
+        this.textColor = textColor;
         this.string = string;
     }
-    public void render(Graphics g){
+
+    public void render(Graphics2D g){
         g.setColor(color);
+        g.setStroke(new BasicStroke(5));
         if(filled){
             g.fillRect((int) x, (int) y, width, height);
+            g.setColor(Color.BLACK);
+            g.drawRect((int) x, (int) y, width, height);
         }else{
             g.drawRect((int) x, (int) y, width, height);
         }
+        g.setColor(textColor);
+        g.setFont(new Font("button", Font.BOLD,height/4));
+        g.drawString(string, (int)((width/2 - g.getFontMetrics().stringWidth(string)/2) + x), (int)(height/2 + 15 + y));
+    }
+
+    public Rectangle getBounds(){
+        return new Rectangle((int) x, (int) y, width, height);
     }
 }
