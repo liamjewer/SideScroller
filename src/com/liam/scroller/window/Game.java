@@ -10,7 +10,7 @@ import java.util.Random;
 
 public class Game extends Canvas implements Runnable {
 
-    public static boolean GameOver = false;
+    public static boolean GameOver = false, Won = false;
     private boolean running = false;
     private Thread thread;
 
@@ -104,8 +104,16 @@ public class Game extends Canvas implements Runnable {
                 g.setColor(Color.RED);
                 g.setFont(new Font("game over", Font.BOLD, 100));
                 g.drawString("Game over!", WIDTH / 2 - g.getFontMetrics().stringWidth("Game over!") / 2, 300);
-                g.setColor(Color.GREEN);
+                g.setColor(new Color(200, 0,0));
                 g.setFont(new Font("game over", Font.BOLD, 20));
+                g.drawString("You made it to level " + LEVEL + " and picked up " + Player.Points + " Coins", WIDTH / 2 - g.getFontMetrics().stringWidth("You made it to level: " + LEVEL + " and picked up " + Player.Points + " Coins") / 2, 340);
+            }else if (Won) {
+                //center this text
+                g.setColor(Color.RED);
+                g.setFont(new Font("You win", Font.BOLD, 100));
+                g.drawString("You Won!", WIDTH / 2 - g.getFontMetrics().stringWidth("Game over!") / 2, 300);
+                g.setColor(new Color(200, 0,0));
+                g.setFont(new Font("winner", Font.BOLD, 20));
                 g.drawString("You made it to level " + LEVEL + " and picked up " + Player.Points + " Coins", WIDTH / 2 - g.getFontMetrics().stringWidth("You made it to level: " + LEVEL + " and picked up " + Player.Points + " Coins") / 2, 340);
             }
         }else if(state == State.Menu){

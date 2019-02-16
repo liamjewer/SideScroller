@@ -99,16 +99,13 @@ public class ObjectHandler {
         }
     }
 
-    public void switchLevel(){
-        switch (Game.LEVEL){
-            case 1:
-                loadImageLevel(levels[1]);
-            case 2:
-                loadImageLevel(levels[2]);
-            case 3:
-                loadImageLevel(levels[3]);
-        }
+    public void switchLevel() {
         Game.LEVEL++;
+        if(Game.LEVEL <= levels.length) {
+            loadImageLevel(levels[Game.LEVEL - 1]);
+        }else{
+            Game.Won = true;
+        }
     }
 
     public void respawn(){

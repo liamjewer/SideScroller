@@ -8,7 +8,7 @@ public abstract class GameObject {
     public ObjectId id;
     protected static float velX = 0;
     protected float velY = 0;
-    protected boolean falling = true;
+    protected boolean falling = false;
     protected boolean jumping = false;
 
     public boolean isFalling() {
