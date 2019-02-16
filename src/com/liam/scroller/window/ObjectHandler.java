@@ -17,13 +17,15 @@ public class ObjectHandler {
     public static int maxX = 0;
     private Camera cam;
     private ParallaxEngine paralaxEngine;
-    private BufferedImage[] levels = new BufferedImage[2];
+    private BufferedImage[] levels = new BufferedImage[4];
 
     public ObjectHandler(Camera cam){
         this.cam = cam;
 
         levels[0] = loader.loadImage("/level1.png"); //loading the level
         levels[1] = loader.loadImage("/level2.png"); //loading the level
+        levels[2] = loader.loadImage("/level3.png"); //loading the level
+        levels[3] = loader.loadImage("/level4.png"); //loading the level
         loadImageLevel(levels[0]);
         ParallaxLayer mid = new ParallaxLayer(Texture.background[0], 0.5, 0, this); //clouds
         ParallaxLayer back = new ParallaxLayer(Texture.background[1], 0.3, 0, this); //mountains
@@ -52,6 +54,7 @@ public class ObjectHandler {
     void loadImageLevel(BufferedImage image){
         int w = image.getWidth();
         int h = image.getHeight();
+        clearLevel();
 
         for(int xx = 0; xx < h; xx++){
             for(int yy = 0; yy < w; yy++){
@@ -97,10 +100,13 @@ public class ObjectHandler {
     }
 
     public void switchLevel(){
-        clearLevel();
         switch (Game.LEVEL){
             case 1:
                 loadImageLevel(levels[1]);
+            case 2:
+                loadImageLevel(levels[2]);
+            case 3:
+                loadImageLevel(levels[3]);
         }
         Game.LEVEL++;
     }

@@ -107,10 +107,12 @@ public class Player extends GameObject {
             }else if(tempObject.getId() == ObjectId.Lava){
                 if(getBounds().intersects(tempObject.getBounds())) {
                     health -= 1;
-                    y = tempObject.getY() - height;
-                    velY = 0;
+                    velY = 1;
                     falling = false;
                     jumping = false;
+                    if(y - height >= tempObject.getY() - tempObject.getBounds().height){
+                        velY = 0;
+                    }
                 }
             }else if(tempObject.getId() == ObjectId.Spikes){
                 if(getBounds().intersects(tempObject.getBounds())) {

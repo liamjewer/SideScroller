@@ -12,6 +12,7 @@ public class Texture {
     public static BufferedImage Portal = null;
     public static BufferedImage lives = null;
     public static BufferedImage coin = null;
+    public static BufferedImage button = null;
 
     public BufferedImage[] block = new BufferedImage[3];
     public BufferedImage[] player = new BufferedImage[8];
@@ -25,6 +26,7 @@ public class Texture {
         player_sheet = loader.loadImage("/player_sheet.png");
         Portal = loader.loadImage("/Portal.png");
         lives = loader.loadImage("/Lives.png");
+        button = loader.loadImage("/Button.png");
 
         background[0] = loader.loadImage("/clouds.png");
         background[1] = loader.loadImage("/mountains.png");

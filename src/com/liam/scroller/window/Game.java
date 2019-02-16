@@ -106,7 +106,7 @@ public class Game extends Canvas implements Runnable {
                 g.drawString("Game over!", WIDTH / 2 - g.getFontMetrics().stringWidth("Game over!") / 2, 300);
                 g.setColor(Color.GREEN);
                 g.setFont(new Font("game over", Font.BOLD, 20));
-                g.drawString("You made it to level: " + LEVEL + " and picked up " + Player.Points + " Coins", WIDTH / 2 - g.getFontMetrics().stringWidth("You made it to level: " + LEVEL + " and picked up " + Player.Points + " Coins") / 2, 340);
+                g.drawString("You made it to level " + LEVEL + " and picked up " + Player.Points + " Coins", WIDTH / 2 - g.getFontMetrics().stringWidth("You made it to level: " + LEVEL + " and picked up " + Player.Points + " Coins") / 2, 340);
             }
         }else if(state == State.Menu){
             menu.render(g);

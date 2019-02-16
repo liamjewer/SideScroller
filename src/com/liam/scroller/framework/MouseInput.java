@@ -1,6 +1,9 @@
 package com.liam.scroller.framework;
 
 import com.liam.scroller.window.Game;
+import com.liam.scroller.window.Window;
+
+import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 

@@ -1,6 +1,7 @@
 package com.liam.scroller.framework;
 
 import java.awt.*;
+import java.awt.event.MouseListener;
 
 public class Button {
     private final ButtonID id;
@@ -31,6 +32,7 @@ public class Button {
         }else{
             g.drawRect((int) x, (int) y, width, height);
         }
+        g.drawImage(Texture.button, (int) x, (int) y, width, height, null);
         g.setColor(textColor);
         g.setFont(new Font("button", Font.BOLD,height/4));
         g.drawString(string, (int)((width/2 - g.getFontMetrics().stringWidth(string)/2) + x), (int)(height/2 + 15 + y));
