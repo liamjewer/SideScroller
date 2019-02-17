@@ -166,7 +166,7 @@ public class Player extends GameObject {
     }
     @Override
     public Rectangle getBounds() {
-        return new Rectangle((int) ((int)x+(width/2)-(width/4)), (int) ((int)y + height/2), (int)width/2, (int)height/2);
+        return new Rectangle((int) ((int)x+(width/2)-(width/4)), (int) ((int)y + height/2), (int)width/2, (int)height/2 + 1);
     }
     public Rectangle getBoundsTop() {
         return new Rectangle((int) ((int)x+(width/2)-(width/4)), (int)y, (int)width/2, (int)height/2);
