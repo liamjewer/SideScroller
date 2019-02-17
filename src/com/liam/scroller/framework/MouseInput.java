@@ -11,25 +11,18 @@ public class MouseInput implements MouseListener {
 
     @Override
     public void mouseClicked(MouseEvent e) {
-
+        if(Game.state == State.Menu) {
+            if (mouseOver(GameMenu.play.getBounds(), e)) {
+                Game.state = State.Game;
+            } else if (mouseOver(GameMenu.exit.getBounds(), e)){
+                System.exit(0);
+            }
+        }
     }
 
     @Override
     public void mousePressed(MouseEvent e) {
-        int mx = e.getX();
-        int my = e.getY();
 
-        if(mx >= GameMenu.play.getBounds().x && mx <= GameMenu.play.getBounds().x + GameMenu.play.getBounds().width){
-            if (my >= GameMenu.play.getBounds().y && my <= GameMenu.play.getBounds().y + GameMenu.play.getBounds().height){
-                Game.state = State.Game;
-            }
-        }
-
-        if(mx >= GameMenu.exit.getBounds().x && mx <= GameMenu.exit.getBounds().x + GameMenu.exit.getBounds().width){
-            if (my >= GameMenu.exit.getBounds().y && my <= GameMenu.exit.getBounds().y + GameMenu.exit.getBounds().height){
-                System.exit(0);
-            }
-        }
     }
 
     @Override
@@ -45,5 +38,19 @@ public class MouseInput implements MouseListener {
     @Override
     public void mouseExited(MouseEvent e) {
 
+    }
+    private boolean mouseOver(Rectangle rect, MouseEvent e){
+        int mx = e.getX();
+        int my = e.getY();
+
+        if(mx >= rect.x && mx <= rect.x + rect.width){
+            if (my >= rect.y && my <= rect.y + rect.height){
+                return true;
+            }else{
+                return false;
+            }
+        }else{
+            return false;
+        }
     }
 }
