@@ -86,8 +86,10 @@ public class Player extends GameObject {
                 if(getBounds().intersects(tempObject.getBounds())){
                     y = tempObject.getY() - height;
                     velY = 0;
-                    this.falling = false;
-                    this.jumping = false;
+                    falling = false;
+                    jumping = false;
+                }else{
+                    falling = true;
                 }
                 if(getBoundsRight().intersects(tempObject.getBounds())){
                     x = tempObject.getX() - width;
@@ -106,8 +108,8 @@ public class Player extends GameObject {
                 if(getBounds().intersects(tempObject.getBounds())) {
                     health -= 1;
                     velY = 1;
-                    this.falling = false;
-                    this.jumping = false;
+                    falling = false;
+                    jumping = false;
                     if(y - height >= tempObject.getY() - tempObject.getBounds().height){
                         velY = 0;
                     }
@@ -117,10 +119,10 @@ public class Player extends GameObject {
                     health  = 0; // why is this taking away two lives
                     y = tempObject.getY() - height;
                     velY = 0;
-                    this.falling = false;
-                    this.jumping = false;
+                    falling = false;
+                    jumping = false;
                 }else{
-                    this.falling = true;
+                    falling = true;
                 }
             }else if(tempObject.getId() == ObjectId.Coin){
                 if(getBounds().intersects(tempObject.getBounds())){
