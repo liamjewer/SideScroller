@@ -4,5 +4,7 @@ public enum State {
     Menu(),
     Game(),
     Paused(),
-    Controls()
+    Controls(),
+    GameOver(),
+    Winner()
 }

@@ -10,7 +10,6 @@ import java.util.Random;
 
 public class Game extends Canvas implements Runnable {
 
-    public static boolean GameOver = false, Won = false;
     private boolean running = false;
     private Thread thread;
 
@@ -92,7 +91,7 @@ public class Game extends Canvas implements Runnable {
         g.setColor(new Color(153, 204, 255));
         g.fillRect(0, 0, getWidth(), getHeight());
 
-        if(state == State.Game || state == State.Paused) {
+        if(state == State.Game || state == State.Paused || state == State.Winner || state == State.GameOver) {
             //////////////////////////////////
             g2d.translate(cam.getX(), cam.getY()); //begin of cam
             //everything between here is effected by the camera movement
@@ -101,7 +100,7 @@ public class Game extends Canvas implements Runnable {
             g2d.translate(-cam.getX(), -cam.getY()); //end of cam
             //////////////////////////////////
             HUD.render(g);
-            if (GameOver) {
+            if (state == State.GameOver) {
                 g.setColor(Color.BLACK);
                 g.fillRect(0, Game.HEIGHT/2 - Game.HEIGHT/4, Game.WIDTH, Game.HEIGHT/2);
                 //center this text
@@ -111,7 +110,7 @@ public class Game extends Canvas implements Runnable {
                 g.setColor(new Color(200, 0,0));
                 g.setFont(new Font("game over", Font.BOLD, 20));
                 g.drawString("You made it to level " + LEVEL + " and picked up " + Player.Points + " Coins", WIDTH / 2 - g.getFontMetrics().stringWidth("You made it to level: " + LEVEL + " and picked up " + Player.Points + " Coins") / 2, 340);
-            }else if (Won) {
+            }else if (state == State.Winner) {
                 g.setColor(Color.BLACK);
                 g.fillRect(Game.WIDTH/2 - Game.WIDTH/4, Game.HEIGHT/2 - Game.HEIGHT/4, Game.WIDTH/2, Game.HEIGHT/2);
                 //center this text

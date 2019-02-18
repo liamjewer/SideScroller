@@ -2,6 +2,7 @@ package com.liam.scroller.window;
 
 import com.liam.scroller.framework.GameObject;
 import com.liam.scroller.framework.ObjectId;
+import com.liam.scroller.framework.State;
 import com.liam.scroller.framework.Texture;
 import com.liam.scroller.objects.*;
 
@@ -109,7 +110,7 @@ public class ObjectHandler {
         if(Game.LEVEL <= levels.length) {
             loadImageLevel(levels[Game.LEVEL - 1]);
         }else{
-            Game.Won = true;
+            Game.state = State.Winner;
         }
     }
 
@@ -121,7 +122,7 @@ public class ObjectHandler {
             loadImageLevel(levels[Game.LEVEL - 1]);
             Player.lives--;
         }else{
-            Game.GameOver = true;
+            Game.state = State.GameOver;
         }
     }
 
