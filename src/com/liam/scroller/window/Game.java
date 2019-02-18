@@ -126,8 +126,14 @@ public class Game extends Canvas implements Runnable {
                 pMenu.render(g);
             }
         }else if(state == State.Menu){
+            handler.mid.render((Graphics2D) g);
+            handler.back.render((Graphics2D) g);
+            handler.front.render((Graphics2D) g);
             menu.render(g);
         }else if(state == State.Controls){
+            handler.mid.render((Graphics2D) g);
+            handler.back.render((Graphics2D) g);
+            handler.front.render((Graphics2D) g);
             cMenu.render(g);
         }
         g.dispose();

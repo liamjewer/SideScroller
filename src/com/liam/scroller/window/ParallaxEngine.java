@@ -1,5 +1,7 @@
 package com.liam.scroller.window;
 
+import com.liam.scroller.framework.State;
+
 import java.awt.*;
 
 public class ParallaxEngine {

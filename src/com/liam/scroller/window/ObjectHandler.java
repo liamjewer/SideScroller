@@ -18,6 +18,10 @@ public class ObjectHandler {
     private Camera cam;
     private ParallaxEngine paralaxEngine;
     private BufferedImage[] levels = new BufferedImage[4];
+    public ParallaxLayer mid;
+    public ParallaxLayer back;
+    public ParallaxLayer front;
+
 
     public ObjectHandler(Camera cam){
         this.cam = cam;
@@ -27,9 +31,9 @@ public class ObjectHandler {
         levels[2] = loader.loadImage("/level3.png"); //loading the level
         levels[3] = loader.loadImage("/level4.png"); //loading the level
         loadImageLevel(levels[0]);
-        ParallaxLayer mid = new ParallaxLayer(Texture.background[0], 0.5, 0, this); //clouds
-        ParallaxLayer back = new ParallaxLayer(Texture.background[1], 0.3, 0, this); //mountains
-        ParallaxLayer front = new ParallaxLayer(Texture.background[2], 0.7, 0, this); //hills
+        mid = new ParallaxLayer(Texture.background[0], 0.5, 0, this); //clouds
+        back = new ParallaxLayer(Texture.background[1], 0.3, 0, this); //mountains
+        front = new ParallaxLayer(Texture.background[2], 0.7, 0, this); //hills
         this.paralaxEngine = new ParallaxEngine(back, mid, front);
     }
 

@@ -5,16 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f99bd72f-f58a-4fb5-9f01-230b88e9a64c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/liam/scroller/framework/PausedMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SideScroller/com/liam/scroller/framework/ButtonID.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SideScroller/com/liam/scroller/framework/ButtonID.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SideScroller/com/liam/scroller/framework/GameMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SideScroller/com/liam/scroller/framework/GameMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SideScroller/com/liam/scroller/framework/KeyInput.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SideScroller/com/liam/scroller/framework/KeyInput.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SideScroller/com/liam/scroller/framework/MouseInput.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SideScroller/com/liam/scroller/framework/MouseInput.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SideScroller/com/liam/scroller/window/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SideScroller/com/liam/scroller/window/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/liam/scroller/framework/KeyInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/liam/scroller/framework/KeyInput.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/liam/scroller/framework/MouseInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/liam/scroller/framework/MouseInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SideScroller/com/liam/scroller/window/ObjectHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SideScroller/com/liam/scroller/window/ObjectHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SideScroller/com/liam/scroller/window/ParallaxEngine.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SideScroller/com/liam/scroller/window/ParallaxEngine.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/liam/scroller/framework/ControlsMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/liam/scroller/framework/ControlsMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/liam/scroller/window/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/liam/scroller/window/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/liam/scroller/window/ObjectHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/liam/scroller/window/ObjectHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/liam/scroller/window/ParallaxEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/liam/scroller/window/ParallaxEngine.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -82,24 +80,24 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="3486" />
-          <entry key="txt" value="20" />
+          <entry key="java" value="3886" />
+          <entry key="txt" value="58" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3486" />
-          <entry key="PLAIN_TEXT" value="20" />
+          <entry key="JAVA" value="3886" />
+          <entry key="PLAIN_TEXT" value="58" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="20" />
+          <entry key="java" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="20" />
+          <entry key="JAVA" value="24" />
         </counts>
       </usages-collector>
     </session>
@@ -109,10 +107,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/liam/scroller/window/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="125" column="32" lean-forward="true" selection-start-line="125" selection-start-column="32" selection-end-line="125" selection-end-column="32" />
+            <state relative-caret-position="324">
+              <caret line="135" column="49" selection-start-line="135" selection-start-column="49" selection-end-line="135" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#5264#5265#0" expanded="true" />
+                <element signature="e#5294#5295#0" expanded="true" />
+                <element signature="e#5339#5340#0" expanded="true" />
+                <element signature="e#5404#5405#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -121,8 +123,31 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/liam/scroller/framework/PausedMenu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
+            <state relative-caret-position="323">
               <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/liam/scroller/window/ParallaxEngine.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#273#274#0" expanded="true" />
+                <element signature="e#309#310#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/liam/scroller/window/ObjectHandler.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="36" column="48" selection-start-line="36" selection-start-column="48" selection-end-line="36" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -130,17 +155,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/liam/scroller/framework/GameMenu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="19" selection-end-column="5" />
+            <state relative-caret-position="171">
+              <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/liam/scroller/framework/ControlsMenu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+            <state relative-caret-position="183">
+              <caret line="15" column="60" selection-start-line="15" selection-start-column="60" selection-end-line="15" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -149,37 +174,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/liam/scroller/framework/Button.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-78">
-              <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/liam/scroller/framework/ButtonID.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/liam/scroller/objects/DangerBlock.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/liam/scroller/objects/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="119" column="70" selection-start-line="119" selection-start-column="70" selection-end-line="119" selection-end-column="70" />
+            <state relative-caret-position="19">
+              <caret line="23" column="38" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#6503#6504#0" expanded="true" />
@@ -204,11 +202,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/liam/scroller/framework/MouseInput.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="317">
               <caret line="31" column="31" lean-forward="true" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/liam/scroller/window/ParallaxLayer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -247,6 +257,7 @@
       <find>fall</find>
       <find>respaw</find>
       <find>menu</find>
+      <find>parallax</find>
     </findStrings>
     <replaceStrings>
       <replace>ObjectHandler.maxX * 32</replace>
@@ -277,24 +288,24 @@
         <option value="$PROJECT_DIR$/src/com/liam/scroller/Background_Objects/Clouds.java" />
         <option value="$PROJECT_DIR$/src/com/liam/scroller/window/ParalaxEngine.java" />
         <option value="$PROJECT_DIR$/src/com/liam/scroller/window/ParalaxLayer.java" />
-        <option value="$PROJECT_DIR$/src/com/liam/scroller/window/ParallaxEngine.java" />
         <option value="$PROJECT_DIR$/src/com/liam/scroller/window/Camera.java" />
         <option value="$PROJECT_DIR$/src/com/liam/scroller/window/Window.java" />
         <option value="$PROJECT_DIR$/src/com/liam/scroller/framework/State.java" />
         <option value="$PROJECT_DIR$/src/com/liam/scroller/framework/Menu.java" />
-        <option value="$PROJECT_DIR$/src/com/liam/scroller/window/ParallaxLayer.java" />
         <option value="$PROJECT_DIR$/src/com/liam/scroller/framework/Texture.java" />
         <option value="$PROJECT_DIR$/src/com/liam/scroller/framework/Button.java" />
         <option value="$PROJECT_DIR$/src/com/liam/scroller/framework/GameObject.java" />
         <option value="$PROJECT_DIR$/src/com/liam/scroller/objects/Player.java" />
-        <option value="$PROJECT_DIR$/src/com/liam/scroller/window/ObjectHandler.java" />
         <option value="$PROJECT_DIR$/src/com/liam/scroller/framework/ButtonID.java" />
         <option value="$PROJECT_DIR$/src/com/liam/scroller/framework/GameMenu.java" />
-        <option value="$PROJECT_DIR$/src/com/liam/scroller/framework/ControlsMenu.java" />
         <option value="$PROJECT_DIR$/src/com/liam/scroller/framework/KeyInput.java" />
         <option value="$PROJECT_DIR$/src/com/liam/scroller/framework/PausedMenu.java" />
-        <option value="$PROJECT_DIR$/src/com/liam/scroller/window/Game.java" />
         <option value="$PROJECT_DIR$/src/com/liam/scroller/framework/MouseInput.java" />
+        <option value="$PROJECT_DIR$/src/com/liam/scroller/window/ParallaxEngine.java" />
+        <option value="$PROJECT_DIR$/src/com/liam/scroller/window/ObjectHandler.java" />
+        <option value="$PROJECT_DIR$/src/com/liam/scroller/window/ParallaxLayer.java" />
+        <option value="$PROJECT_DIR$/src/com/liam/scroller/window/Game.java" />
+        <option value="$PROJECT_DIR$/src/com/liam/scroller/framework/ControlsMenu.java" />
       </list>
     </option>
   </component>
@@ -369,7 +380,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550470478436" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550472628136" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.0" />
@@ -433,7 +444,14 @@
       <option name="project" value="LOCAL" />
       <updated>1550469687048</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="paused functionality added">
+      <created>1550470536080</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1550470536080</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -468,7 +486,7 @@
       <window_info anchor="right" id="Maven Projects" order="7" weight="0.32980332" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.090222575" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16187595" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -477,23 +495,23 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2494577" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2810903" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32879046" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.329718" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3270869" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24962178" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Maven Projects" order="7" />
+      <window_info anchor="right" id="Maven Projects" order="7" weight="0.32980332" />
     </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -501,7 +519,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="controls menu added" />
-    <option name="LAST_COMMIT_MESSAGE" value="controls menu added" />
+    <MESSAGE value="paused functionality added" />
+    <option name="LAST_COMMIT_MESSAGE" value="paused functionality added" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -604,23 +623,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/liam/scroller/window/ParallaxLayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/liam/scroller/window/ParallaxEngine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/liam/scroller/framework/Texture.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
@@ -635,21 +637,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="6" column="25" lean-forward="true" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/liam/scroller/window/ObjectHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="108" column="9" lean-forward="true" selection-start-line="108" selection-start-column="9" selection-end-line="108" selection-end-column="9" />
-          <folding>
-            <element signature="e#4574#4575#0" expanded="true" />
-            <element signature="e#4604#4605#0" expanded="true" />
-            <element signature="e#4651#4652#0" expanded="true" />
-            <element signature="e#4690#4691#0" expanded="true" />
-            <element signature="e#4739#4740#0" expanded="true" />
-            <element signature="e#4781#4782#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -674,16 +661,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/liam/scroller/framework/ControlsMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/liam/scroller/framework/KeyInput.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="317">
@@ -693,32 +670,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/liam/scroller/framework/GameMenu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="19" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/liam/scroller/window/Game.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="125" column="32" lean-forward="true" selection-start-line="125" selection-start-column="32" selection-end-line="125" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/liam/scroller/framework/PausedMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+        <state relative-caret-position="171">
+          <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/liam/scroller/objects/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="119" column="70" selection-start-line="119" selection-start-column="70" selection-end-line="119" selection-end-column="70" />
+        <state relative-caret-position="19">
+          <caret line="23" column="38" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#6503#6504#0" expanded="true" />
@@ -733,10 +693,70 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/liam/scroller/framework/PausedMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="12" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/liam/scroller/framework/MouseInput.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="317">
           <caret line="31" column="31" lean-forward="true" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/liam/scroller/window/ParallaxLayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/liam/scroller/window/ObjectHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="36" column="48" selection-start-line="36" selection-start-column="48" selection-end-line="36" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/liam/scroller/window/ParallaxEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#273#274#0" expanded="true" />
+            <element signature="e#309#310#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/liam/scroller/window/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="135" column="49" selection-start-line="135" selection-start-column="49" selection-end-line="135" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5264#5265#0" expanded="true" />
+            <element signature="e#5294#5295#0" expanded="true" />
+            <element signature="e#5339#5340#0" expanded="true" />
+            <element signature="e#5404#5405#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/liam/scroller/framework/ControlsMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="15" column="60" selection-start-line="15" selection-start-column="60" selection-end-line="15" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
