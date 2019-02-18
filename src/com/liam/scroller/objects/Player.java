@@ -116,13 +116,9 @@ public class Player extends GameObject {
                 }
             }else if(tempObject.getId() == ObjectId.Spikes){
                 if(getBounds().intersects(tempObject.getBounds())) {
-                    health  = 0; // why is this taking away two lives
-                    y = tempObject.getY() - height;
-                    velY = 0;
-                    falling = false;
-                    jumping = false;
-                }else{
-                    falling = true;
+                    handler.getObjectById(ObjectId.Player).setVelX(0);
+                    handler.getObjectById(ObjectId.Player).setVelY(0);
+                    handler.respawn();
                 }
             }else if(tempObject.getId() == ObjectId.Coin){
                 if(getBounds().intersects(tempObject.getBounds())){

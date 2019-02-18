@@ -101,6 +101,7 @@ public class ObjectHandler {
 
     public void switchLevel() {
         Game.LEVEL++;
+        getObjectById(ObjectId.Player).setVelX(0);
         if(Game.LEVEL <= levels.length) {
             loadImageLevel(levels[Game.LEVEL - 1]);
         }else{
@@ -110,14 +111,24 @@ public class ObjectHandler {
 
     public void respawn(){
         if(Player.lives != 0){
-            Player.lives--;
             clearLevel();
             Player.health = 100;
             Player.lastFacing = true;
             loadImageLevel(levels[Game.LEVEL - 1]);
+            Player.lives--;
         }else{
             Game.GameOver = true;
         }
+    }
+
+    public GameObject getObjectById(ObjectId id){
+        for(int i = 0; i < object.size(); i++) {
+            GameObject tempObject = object.get(i);
+            if (tempObject.getId() == id) {
+                return tempObject;
+            }
+        }
+        return null;
     }
 
     private void clearLevel(){

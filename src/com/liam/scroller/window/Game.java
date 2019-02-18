@@ -100,6 +100,8 @@ public class Game extends Canvas implements Runnable {
             //////////////////////////////////
             HUD.render(g);
             if (GameOver) {
+                g.setColor(Color.BLACK);
+                g.fillRect(0, Game.HEIGHT/2 - Game.HEIGHT/4, Game.WIDTH, Game.HEIGHT/2);
                 //center this text
                 g.setColor(Color.RED);
                 g.setFont(new Font("game over", Font.BOLD, 100));
@@ -108,6 +110,8 @@ public class Game extends Canvas implements Runnable {
                 g.setFont(new Font("game over", Font.BOLD, 20));
                 g.drawString("You made it to level " + LEVEL + " and picked up " + Player.Points + " Coins", WIDTH / 2 - g.getFontMetrics().stringWidth("You made it to level: " + LEVEL + " and picked up " + Player.Points + " Coins") / 2, 340);
             }else if (Won) {
+                g.setColor(Color.BLACK);
+                g.fillRect(Game.WIDTH/2 - Game.WIDTH/4, Game.HEIGHT/2 - Game.HEIGHT/4, Game.WIDTH/2, Game.HEIGHT/2);
                 //center this text
                 g.setColor(Color.RED);
                 g.setFont(new Font("You win", Font.BOLD, 100));
