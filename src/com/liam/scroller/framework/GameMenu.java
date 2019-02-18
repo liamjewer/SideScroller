@@ -4,7 +4,7 @@ import java.awt.*;
 
 public class GameMenu{
     static Button play;
-    Button controls;
+    static Button controls;
     static Button exit;
 
     public GameMenu(){

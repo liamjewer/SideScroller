@@ -4,5 +4,6 @@ public enum ButtonID {
     Play(),
     Resume(),
     Controls(),
-    Exit()
+    Exit(),
+    Menu()
 }

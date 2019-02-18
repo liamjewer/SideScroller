@@ -21,6 +21,7 @@ public class Game extends Canvas implements Runnable {
     static Texture texture;
     public static State state = State.Menu;
     GameMenu menu = new GameMenu();
+    ControlsMenu cMenu = new ControlsMenu();
 
     Random r = new Random();
 
@@ -122,6 +123,8 @@ public class Game extends Canvas implements Runnable {
             }
         }else if(state == State.Menu){
             menu.render(g);
+        }else if(state == State.Controls){
+            cMenu.render(g);
         }
         g.dispose();
         bs.show();
