@@ -1,13 +1,12 @@
 package com.liam.scroller.framework;
 
 import com.liam.scroller.window.Game;
-import com.liam.scroller.window.Window;
 
+import javax.swing.event.MouseInputListener;
 import java.awt.*;
 import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 
-public class MouseInput implements MouseListener {
+public class MouseInput implements MouseInputListener {
 
     @Override
     public void mouseClicked(MouseEvent e) {
@@ -66,5 +65,15 @@ public class MouseInput implements MouseListener {
         }else{
             return false;
         }
+    }
+
+    @Override
+    public void mouseDragged(MouseEvent e) {
+
+    }
+
+    @Override
+    public void mouseMoved(MouseEvent e) {
+
     }
 }

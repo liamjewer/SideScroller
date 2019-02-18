@@ -21,7 +21,7 @@ public class KeyInput extends KeyAdapter {
         for (int i = 0; i < handler.object.size(); i++) {
             GameObject tempObject = handler.object.get(i);
             if (tempObject.getId() == ObjectId.Player) {
-                if (Game.state == State.Game) {
+                if(Game.state == State.Game) {
                     if (k == KeyEvent.VK_D || k == KeyEvent.VK_RIGHT) {
                         tempObject.setVelX(5);
                         Player.lastFacing = true;
@@ -39,7 +39,7 @@ public class KeyInput extends KeyAdapter {
                     if (k == KeyEvent.VK_ESCAPE) {
                         Game.state = State.Paused;
                     }
-                } else if (Game.state == State.Paused) {
+                }else if(Game.state == State.Paused){
                     if (k == KeyEvent.VK_ESCAPE) {
                         Game.state = State.Game;
                     }
