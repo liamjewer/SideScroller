@@ -22,6 +22,7 @@ public class Game extends Canvas implements Runnable {
     public static State state = State.Menu;
     GameMenu menu = new GameMenu();
     ControlsMenu cMenu = new ControlsMenu();
+    PausedMenu pMenu = new PausedMenu();
 
     Random r = new Random();
 
@@ -91,7 +92,7 @@ public class Game extends Canvas implements Runnable {
         g.setColor(new Color(153, 204, 255));
         g.fillRect(0, 0, getWidth(), getHeight());
 
-        if(state == State.Game) {
+        if(state == State.Game || state == State.Paused) {
             //////////////////////////////////
             g2d.translate(cam.getX(), cam.getY()); //begin of cam
             //everything between here is effected by the camera movement
@@ -120,6 +121,9 @@ public class Game extends Canvas implements Runnable {
                 g.setColor(new Color(200, 0,0));
                 g.setFont(new Font("winner", Font.BOLD, 20));
                 g.drawString("You made it to level " + LEVEL + " and picked up " + Player.Points + " Coins", WIDTH / 2 - g.getFontMetrics().stringWidth("You made it to level: " + LEVEL + " and picked up " + Player.Points + " Coins") / 2, 340);
+            }
+            if(state == State.Paused){
+                pMenu.render(g);
             }
         }else if(state == State.Menu){
             menu.render(g);

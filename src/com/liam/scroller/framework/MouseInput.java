@@ -23,6 +23,14 @@ public class MouseInput implements MouseListener {
             if(mouseOver(ControlsMenu.Return.getBounds(), e)){
                 Game.state = State.Menu;
             }
+        }else if(Game.state == State.Paused){
+            if(mouseOver(PausedMenu.resume.getBounds(), e)){
+                Game.state = State.Game;
+            }else if(mouseOver(PausedMenu.menu.getBounds(), e)){
+                Game.state = State.Menu;
+            }else if(mouseOver(PausedMenu.exit.getBounds(), e)){
+                System.exit(0);
+            }
         }
     }
 
