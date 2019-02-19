@@ -35,6 +35,7 @@ public class Game extends Canvas implements Runnable {
         cam = new Camera(0, 0);
         this.addKeyListener(new KeyInput(handler));
         this.addMouseListener(new MouseInput());
+        this.addMouseMotionListener(new MouseInput());
     }
 
     public synchronized void start(){

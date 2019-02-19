@@ -74,6 +74,34 @@ public class MouseInput implements MouseInputListener {
 
     @Override
     public void mouseMoved(MouseEvent e) {
+        if(Game.state == State.Menu) {
+            if (mouseOver(GameMenu.play.getBounds(), e)) {
+                GameMenu.play.color = new Color(0, 100, 0);
+            }else{
+                GameMenu.play.color = Color.GREEN;
+            }
+            if (mouseOver(GameMenu.exit.getBounds(), e)){
+                GameMenu.exit.color = new Color(0,0,100);
+            }else{
+                GameMenu.exit.color = Color.BLUE;
+            }
+            if(mouseOver(GameMenu.controls.getBounds(), e)){
+                GameMenu.controls.color = new Color(100, 0, 100);
+            }else{
+                GameMenu.controls.color = Color.MAGENTA;
+            }
+        }else if(Game.state == State.Controls){
+            if(mouseOver(ControlsMenu.Return.getBounds(), e)){
 
+            }
+        }else if(Game.state == State.Paused){
+            if(mouseOver(PausedMenu.resume.getBounds(), e)){
+
+            }else if(mouseOver(PausedMenu.menu.getBounds(), e)){
+
+            }else if(mouseOver(PausedMenu.exit.getBounds(), e)){
+
+            }
+        }
     }
 }
