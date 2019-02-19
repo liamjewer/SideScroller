@@ -76,39 +76,39 @@ public class MouseInput implements MouseInputListener {
     public void mouseMoved(MouseEvent e) {
         if(Game.state == State.Menu) {
             if (mouseOver(GameMenu.play.getBounds(), e)) {
-                GameMenu.play.color = new Color(Math.max(0, GameMenu.play.Default.getRed() - 100), Math.max(0, GameMenu.play.Default.getGreen() - 100), Math.max(0, GameMenu.play.Default.getBlue() - 100));
+                GameMenu.play.color = GameMenu.play.Default.darker();
             }else{
                 GameMenu.play.color = GameMenu.play.Default;
             }
             if (mouseOver(GameMenu.exit.getBounds(), e)){
-                GameMenu.exit.color = new Color(0,0,100);
+                GameMenu.exit.color = GameMenu.exit.Default.darker();
             }else{
                 GameMenu.exit.color = GameMenu.exit.Default;
             }
             if(mouseOver(GameMenu.controls.getBounds(), e)){
-                GameMenu.controls.color = new Color(100, 0, 100);
+                GameMenu.controls.color = GameMenu.controls.Default.darker();
             }else{
                 GameMenu.controls.color = GameMenu.controls.Default;
             }
         }else if(Game.state == State.Controls){
             if(mouseOver(ControlsMenu.Return.getBounds(), e)){
-                ControlsMenu.Return.color = new Color(0, 100, 100);
+                ControlsMenu.Return.color = ControlsMenu.Return.Default.darker();
             }else{
                 ControlsMenu.Return.color = ControlsMenu.Return.Default;
             }
         }else if(Game.state == State.Paused){
             if(mouseOver(PausedMenu.resume.getBounds(), e)){
-                PausedMenu.resume.color = new Color(0, 100, 0);
+                PausedMenu.resume.color = PausedMenu.resume.Default.darker();
             }else{
                 PausedMenu.resume.color = PausedMenu.resume.Default;
             }
             if(mouseOver(PausedMenu.menu.getBounds(), e)){
-                PausedMenu.menu.color = new Color(0,0,100);
+                PausedMenu.menu.color = PausedMenu.menu.Default.darker();
             }else{
                 PausedMenu.menu.color = PausedMenu.menu.Default;
             }
             if(mouseOver(PausedMenu.exit.getBounds(), e)){
-                PausedMenu.exit.color = new Color(100, 0, 100);
+                PausedMenu.exit.color = PausedMenu.exit.Default.darker();
             }else{
                 PausedMenu.exit.color = PausedMenu.exit.Default;
             }
