@@ -8,7 +8,7 @@ public class Button {
     private int width, height;
     private float x, y;
     private boolean filled;
-    Color color, textColor;
+    Color color, textColor, Default;
     String string;
     public Button(float x, float y, int width, int height, boolean filled, String string, Color color, Color textColor, ButtonID id){
         this.x = x;
@@ -18,6 +18,7 @@ public class Button {
         this.filled = filled;
         this.id = id;
         this.color = color;
+        this.Default = color;
         this.textColor = textColor;
         this.string = string;
     }
