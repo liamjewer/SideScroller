@@ -5,6 +5,7 @@ import com.liam.scroller.objects.HUD;
 import com.liam.scroller.objects.Player;
 
 import java.awt.*;
+import java.awt.geom.Point2D;
 import java.awt.image.BufferStrategy;
 import java.util.Random;
 
@@ -100,6 +101,16 @@ public class Game extends Canvas implements Runnable {
 
             g2d.translate(-cam.getX(), -cam.getY()); //end of cam
             //////////////////////////////////
+            Point2D center = new Point2D.Float(WIDTH/2, HEIGHT/2);
+            if(Player.health < 100){
+                float radius = Player.health + (int)Math.floor(WIDTH * 0.75);
+                float[] dist = { 0.5f, 1.0f };
+                Color[] colors = {new Color(0,0,0,0), new Color(255,0,0,255)};
+                RadialGradientPaint p =
+                        new RadialGradientPaint(center, radius, dist, colors);
+                g2d.setPaint(p);
+                g.fillRect(0,0, getWidth(), getHeight());
+            }
             HUD.render(g);
             if (state == State.GameOver) {
                 g.setColor(Color.BLACK);

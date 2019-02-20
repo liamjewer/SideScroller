@@ -43,6 +43,10 @@ public class KeyInput extends KeyAdapter {
                     if (k == KeyEvent.VK_ESCAPE) {
                         Game.state = State.Game;
                     }
+                }else if(Game.state == State.Menu){
+                    if(k == KeyEvent.VK_SPACE){
+                        Game.state = State.Game;
+                    }
                 }
             }
         }

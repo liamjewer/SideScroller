@@ -117,8 +117,6 @@ public class ObjectHandler {
     public void respawn(){
         if(Player.lives != 0){
             clearLevel();
-            Player.health = 100;
-            Player.lastFacing = true;
             loadImageLevel(levels[Game.LEVEL - 1]);
             Player.lives--;
         }else{
