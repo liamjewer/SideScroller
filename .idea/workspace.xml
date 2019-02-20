@@ -6,10 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="f99bd72f-f58a-4fb5-9f01-230b88e9a64c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SideScroller/Button.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SideScroller/Button.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SideScroller/com/liam/scroller/framework/Button.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SideScroller/com/liam/scroller/framework/Button.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SideScroller/com/liam/scroller/framework/KeyInput.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SideScroller/com/liam/scroller/framework/KeyInput.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SideScroller/com/liam/scroller/framework/MouseInput.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SideScroller/com/liam/scroller/framework/MouseInput.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/liam/scroller/framework/MouseInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/liam/scroller/framework/MouseInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SideScroller/com/liam/scroller/objects/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SideScroller/com/liam/scroller/objects/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SideScroller/com/liam/scroller/window/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SideScroller/com/liam/scroller/window/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/liam/scroller/framework/KeyInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/liam/scroller/framework/KeyInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/liam/scroller/window/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/liam/scroller/window/Game.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -69,44 +71,57 @@
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.closed" value="5" />
+          <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.18" value="1" />
           <entry key="project.open.time.20" value="1" />
           <entry key="project.open.time.22" value="1" />
           <entry key="project.open.time.31" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="4633" />
+          <entry key="java" value="4803" />
           <entry key="txt" value="144" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="4633" />
+          <entry key="JAVA" value="4803" />
           <entry key="PLAIN_TEXT" value="144" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="28" />
+          <entry key="java" value="31" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="28" />
+          <entry key="JAVA" value="31" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/liam/scroller/window/Game.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="115" column="28" selection-start-line="115" selection-start-column="28" selection-end-line="115" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/liam/scroller/framework/MouseInput.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="479">
+            <state relative-caret-position="223">
               <caret line="115" column="5" selection-start-line="115" selection-start-column="5" selection-end-line="115" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -118,8 +133,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/liam/scroller/framework/PausedMenu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
+            <state relative-caret-position="133">
               <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/liam/scroller/objects/Player.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="93">
+              <caret line="91" column="35" selection-start-line="91" selection-start-column="35" selection-end-line="91" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -127,8 +154,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/liam/scroller/framework/Button.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="479">
+            <state relative-caret-position="337">
               <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/liam/scroller/framework/KeyInput.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="26" column="49" lean-forward="true" selection-start-line="26" selection-start-column="49" selection-end-line="26" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -206,14 +242,14 @@
         <option value="$PROJECT_DIR$/src/com/liam/scroller/framework/ControlsMenu.java" />
         <option value="$PROJECT_DIR$/src/com/liam/scroller/framework/State.java" />
         <option value="$PROJECT_DIR$/src/com/liam/scroller/window/ObjectHandler.java" />
-        <option value="$PROJECT_DIR$/src/com/liam/scroller/objects/Player.java" />
         <option value="$PROJECT_DIR$/src/com/liam/scroller/framework/GameObject.java" />
-        <option value="$PROJECT_DIR$/src/com/liam/scroller/framework/KeyInput.java" />
         <option value="$PROJECT_DIR$/src/com/liam/scroller/framework/GameMenu.java" />
-        <option value="$PROJECT_DIR$/src/com/liam/scroller/window/Game.java" />
         <option value="$PROJECT_DIR$/src/com/liam/scroller/framework/PausedMenu.java" />
         <option value="$PROJECT_DIR$/src/com/liam/scroller/framework/Button.java" />
         <option value="$PROJECT_DIR$/src/com/liam/scroller/framework/MouseInput.java" />
+        <option value="$PROJECT_DIR$/src/com/liam/scroller/window/Game.java" />
+        <option value="$PROJECT_DIR$/src/com/liam/scroller/objects/Player.java" />
+        <option value="$PROJECT_DIR$/src/com/liam/scroller/framework/KeyInput.java" />
       </list>
     </option>
   </component>
@@ -235,17 +271,13 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="SideScroller" type="b2602c69:ProjectViewProjectNode" />
               <item name="SideScroller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SideScroller" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SideScroller" type="462c0819:PsiDirectoryNode" />
-              <item name="res" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SideScroller" type="b2602c69:ProjectViewProjectNode" />
@@ -284,11 +316,10 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550605524234" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1550630200589" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.0" />
@@ -391,10 +422,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="2576" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1200318" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22919819" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -403,7 +434,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28091106" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2793867" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -559,27 +590,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/liam/scroller/framework/KeyInput.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="46" column="13" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/liam/scroller/framework/ButtonID.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/liam/scroller/objects/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="51" column="23" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -614,34 +628,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/liam/scroller/window/Game.java">
+    <entry file="file://$PROJECT_DIR$/src/com/liam/scroller/framework/MouseInput.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="37" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/liam/scroller/framework/Button.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="479">
-          <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+        <state relative-caret-position="223">
+          <caret line="115" column="5" selection-start-line="115" selection-start-column="5" selection-end-line="115" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/liam/scroller/framework/PausedMenu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
+        <state relative-caret-position="133">
           <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/liam/scroller/framework/MouseInput.java">
+    <entry file="file://$PROJECT_DIR$/src/com/liam/scroller/framework/Button.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="479">
-          <caret line="115" column="5" selection-start-line="115" selection-start-column="5" selection-end-line="115" selection-end-column="5" />
+        <state relative-caret-position="337">
+          <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/liam/scroller/window/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="115" column="28" selection-start-line="115" selection-start-column="28" selection-end-line="115" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/liam/scroller/objects/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="91" column="35" selection-start-line="91" selection-start-column="35" selection-end-line="91" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/liam/scroller/framework/KeyInput.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="26" column="49" lean-forward="true" selection-start-line="26" selection-start-column="49" selection-end-line="26" selection-end-column="49" />
         </state>
       </provider>
     </entry>

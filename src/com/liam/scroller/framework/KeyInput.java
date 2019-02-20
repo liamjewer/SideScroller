@@ -31,7 +31,7 @@ public class KeyInput extends KeyAdapter {
                         Player.lastFacing = false;
                     }
                     if (k == KeyEvent.VK_W || k == KeyEvent.VK_UP) {
-                        if (tempObject.getVelY() == 0) {
+                        if (!handler.getObjectById(ObjectId.Player).jumping) {
                             tempObject.setJumping(true);
                             tempObject.setVelY(-15);
                         }
