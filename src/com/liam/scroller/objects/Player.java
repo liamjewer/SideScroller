@@ -112,9 +112,6 @@ public class Player extends GameObject {
                     velY = 1;
                     falling = false;
                     jumping = false;
-                    if(y - height >= tempObject.getY() - tempObject.getBounds().height){
-                        velY = 0;
-                    }
                 }
             }else if(tempObject.getId() == ObjectId.Spikes){
                 if(getBounds().intersects(tempObject.getBounds())) {
