@@ -13,7 +13,8 @@ import java.util.LinkedList;
 
 public class Player extends GameObject {
     private final Camera cam;
-    private float width = 32, height = 64;
+    public static float width = 32;
+    public float height = 64;
     private float gravity = 0.5f;
     private final float MAX_SPEED = 10;
     private ObjectHandler handler;
@@ -30,6 +31,7 @@ public class Player extends GameObject {
     public static int Points = 0;
     private static boolean ismoving;
     public int lastX = 0;
+    private Arm arm;
 
     public Player(float x, float y, ObjectHandler handler, ObjectId id, Camera cam) {
         super(x, y, id);
@@ -38,6 +40,8 @@ public class Player extends GameObject {
         this.cam = cam;
         health = 100;
         lastFacing = true;
+        arm = new Arm(x + 12, y + 3, ObjectId.Arm);
+        handler.addObject(arm);
 
         playerWalkRight = new Animation(4, texture.player[0], texture.player[1], texture.player[2], texture.player[3]);
         playerWalkLeft = new Animation(4, texture.player[7], texture.player[6], texture.player[5], texture.player[4]);
@@ -50,6 +54,8 @@ public class Player extends GameObject {
     public void tick(LinkedList<GameObject> object) {
         y += velY;
         x += velX;
+        arm.setX(x + 12);
+        arm.setY(y + 3);
 
         if(x != lastX){
             ismoving = true;

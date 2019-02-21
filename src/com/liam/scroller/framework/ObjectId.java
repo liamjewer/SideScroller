@@ -6,5 +6,6 @@ public enum ObjectId {
     Portal(),
     Lava(),
     Coin(),
-    Spikes()
+    Spikes(),
+    Arm()
 }
