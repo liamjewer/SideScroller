@@ -126,12 +126,12 @@ public class Game extends Canvas implements Runnable {
                 g.setColor(Color.BLACK);
                 g.fillRect(0, Game.HEIGHT/2 - Game.HEIGHT/4, Game.WIDTH, Game.HEIGHT/2);
                 //center this text
-                g.setColor(Color.RED);
+                g.setColor(Color.GREEN);
                 g.setFont(new Font("You win", Font.BOLD, 100));
                 g.drawString("You Won!", WIDTH / 2 - g.getFontMetrics().stringWidth("Game over!") / 2, 300);
-                g.setColor(new Color(200, 0,0));
+                g.setColor(new Color(0, 100,0));
                 g.setFont(new Font("winner", Font.BOLD, 20));
-                g.drawString("You made it to level " + LEVEL + " and picked up " + Player.Points + " Coins", WIDTH / 2 - g.getFontMetrics().stringWidth("You made it to level: " + LEVEL + " and picked up " + Player.Points + " Coins") / 2, 340);
+                g.drawString("You made it to level " + LEVEL + " and picked up " + Player.Points + " Coins", WIDTH / 2 - g.getFontMetrics().stringWidth("You made it to level " + LEVEL + " and picked up " + Player.Points + " Coins") / 2, 340);
             }
             if(state == State.Paused){
                 pMenu.render(g);

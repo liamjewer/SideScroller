@@ -33,7 +33,7 @@ public class KeyInput extends KeyAdapter {
                     if (k == KeyEvent.VK_W || k == KeyEvent.VK_UP) {
                         if (!handler.getObjectById(ObjectId.Player).jumping && handler.getObjectById(ObjectId.Player).getVelY() == 0) {
                             tempObject.setJumping(true);
-                            tempObject.setVelY(-15);
+                            tempObject.setVelY(-10);
                         }
                     }
                     if (k == KeyEvent.VK_ESCAPE) {
