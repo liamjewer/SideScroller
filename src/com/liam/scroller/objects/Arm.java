@@ -9,7 +9,7 @@ import java.awt.*;
 import java.util.LinkedList;
 
 public class Arm extends GameObject {
-    public float angle;
+    public static float angle;
 
     Arm(float x, float y, ObjectId id) {
         super(x, y, id);

@@ -1,12 +1,16 @@
 package com.liam.scroller.framework;
 
+import com.liam.scroller.objects.Arm;
+import com.liam.scroller.objects.Player;
 import com.liam.scroller.window.Game;
 
+import javax.print.attribute.standard.JobKOctets;
 import javax.swing.event.MouseInputListener;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 
 public class MouseInput implements MouseInputListener {
+    private float dX, dY;
 
     @Override
     public void mouseClicked(MouseEvent e) {
@@ -74,6 +78,9 @@ public class MouseInput implements MouseInputListener {
 
     @Override
     public void mouseMoved(MouseEvent e) {
+        int mx = e.getX();
+        int my = e.getY();
+
         if(Game.state == State.Menu) {
             if (mouseOver(GameMenu.play.getBounds(), e)) {
                 GameMenu.play.color = GameMenu.play.Default.darker();
@@ -112,6 +119,11 @@ public class MouseInput implements MouseInputListener {
             }else{
                 PausedMenu.exit.color = PausedMenu.exit.Default;
             }
+        }else if(Game.state == State.Game){
+            dX = mx - Game.handler.getObjectById(ObjectId.Player).getX();
+            dY = my - Game.handler.getObjectById(ObjectId.Player).getY();
+
+            Arm.angle = (float) Math.atan(dY/dX);
         }
     }
 }
