@@ -1,5 +1,7 @@
 package com.liam.scroller.framework;
 
+import com.liam.scroller.window.Game;
+
 import java.awt.*;
 
 public class PausedMenu {
@@ -14,6 +16,8 @@ public class PausedMenu {
     }
 
     public void render(Graphics g){
+        g.setColor(new Color(0,0,0, 150));
+        g.fillRect(0, 0, Game.WIDTH, Game.HEIGHT);
         resume.render((Graphics2D) g);
         menu.render((Graphics2D) g);
         exit.render((Graphics2D) g);
