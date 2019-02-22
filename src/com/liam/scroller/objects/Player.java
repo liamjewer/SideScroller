@@ -40,7 +40,7 @@ public class Player extends GameObject {
         this.cam = cam;
         health = 100;
         lastFacing = true;
-        arm = new Arm(x - 2, y + 3, ObjectId.Arm);
+        arm = new Arm(x - 7, y - 2, ObjectId.Arm);
         handler.addObject(arm);
 
         playerWalkRight = new Animation(4, texture.player[0], texture.player[1], texture.player[2], texture.player[3]);
@@ -54,8 +54,8 @@ public class Player extends GameObject {
     public void tick(LinkedList<GameObject> object) {
         y += velY;
         x += velX;
-        arm.setX(x - 2);
-        arm.setY(y + 3);
+        arm.setX(x - 7);
+        arm.setY(y -2);
 
         if(x != lastX){
             ismoving = true;
