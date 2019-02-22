@@ -124,7 +124,7 @@ public class MouseInput implements MouseInputListener {
             dY = my - Game.handler.getObjectById(ObjectId.Player).getY();
             if(dX < 0){
                 Arm.angle = (float) Math.atan(dY/dX) + (float) Math.toRadians(180);
-            }else {
+            }else{
                 Arm.angle = (float) Math.atan(dY / dX);
             }
         }
