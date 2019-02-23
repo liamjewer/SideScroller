@@ -1,6 +1,7 @@
 package com.liam.scroller.objects;
 
 import com.liam.scroller.framework.GameObject;
+import com.liam.scroller.framework.MouseInput;
 import com.liam.scroller.framework.ObjectId;
 import com.liam.scroller.framework.Texture;
 import com.liam.scroller.window.Animation;
@@ -32,6 +33,11 @@ public class Player extends GameObject {
     private static boolean ismoving;
     public int lastX = 0;
     private Arm arm;
+    private Laser laser;
+    public static float dX;
+    public static float dY;
+    public float hyp;
+    public static float scaleF;
 
     public Player(float x, float y, ObjectHandler handler, ObjectId id, Camera cam) {
         super(x, y, id);
@@ -42,6 +48,8 @@ public class Player extends GameObject {
         lastFacing = true;
         arm = new Arm(x - 7, y - 2, ObjectId.Arm);
         handler.addObject(arm);
+        laser = new Laser(0,0, ObjectId.Laser);
+        handler.addObject(laser);
 
         playerWalkRight = new Animation(4, texture.player[0], texture.player[1], texture.player[2], texture.player[3]);
         playerWalkLeft = new Animation(4, texture.player[7], texture.player[6], texture.player[5], texture.player[4]);
@@ -55,7 +63,7 @@ public class Player extends GameObject {
         y += velY;
         x += velX;
         arm.setX(x - 7);
-        arm.setY(y -2);
+        arm.setY(y - 2);
 
         if(x != lastX){
             ismoving = true;
@@ -75,6 +83,19 @@ public class Player extends GameObject {
         if(health <= 0){
             handler.respawn();
         }
+
+        dX = MouseInput.mx - x;
+        dY = MouseInput.my - y;
+        if(dX < 0){
+            Arm.angle = (float) Math.atan(dY/dX) + (float) Math.toRadians(180);
+        }else{
+            Arm.angle = (float) Math.atan(dY / dX);
+        }
+        hyp = (float) Math.sqrt(dX*dX + dY*dY);
+        scaleF = hyp/23;
+        Laser.originX = Math.round(dX/scaleF) + arm.getX() + Texture.arm.getWidth()/2;
+        Laser.originY = Math.round(dY/scaleF) + arm.getY() + Texture.arm.getHeight()/2;
+
         Collision(object);
         playerWalkRight.runAnimation();
         playerWalkLeft.runAnimation();

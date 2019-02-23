@@ -17,7 +17,7 @@ public class Game extends Canvas implements Runnable {
     public static int WIDTH, HEIGHT;
 
     public static ObjectHandler handler;
-    Camera cam;
+    public static Camera cam;
     static Texture texture;
     public static State state = State.Menu;
     GameMenu menu = new GameMenu();

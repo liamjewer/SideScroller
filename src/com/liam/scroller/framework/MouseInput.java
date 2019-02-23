@@ -1,16 +1,19 @@
 package com.liam.scroller.framework;
 
 import com.liam.scroller.objects.Arm;
+import com.liam.scroller.objects.Laser;
 import com.liam.scroller.objects.Player;
+import com.liam.scroller.window.Camera;
 import com.liam.scroller.window.Game;
-
-import javax.print.attribute.standard.JobKOctets;
 import javax.swing.event.MouseInputListener;
 import java.awt.*;
 import java.awt.event.MouseEvent;
 
 public class MouseInput implements MouseInputListener {
-    private float dX, dY;
+
+    public static float mx;
+    public static float my;
+    private Laser laser;
 
     @Override
     public void mouseClicked(MouseEvent e) {
@@ -34,6 +37,9 @@ public class MouseInput implements MouseInputListener {
             }else if(mouseOver(PausedMenu.exit.getBounds(), e)){
                 System.exit(0);
             }
+        }else if(Game.state == State.Game){
+            laser = new Laser(0,0, ObjectId.Laser);
+            Game.handler.addObject(laser);
         }
     }
 
@@ -57,8 +63,8 @@ public class MouseInput implements MouseInputListener {
 
     }
     private boolean mouseOver(Rectangle rect, MouseEvent e){
-        int mx = e.getX();
-        int my = e.getY();
+        mx = e.getX();
+        my = e.getY();
 
         if(mx >= rect.x && mx <= rect.x + rect.width){
             if (my >= rect.y && my <= rect.y + rect.height){
@@ -78,8 +84,8 @@ public class MouseInput implements MouseInputListener {
 
     @Override
     public void mouseMoved(MouseEvent e) {
-        int mx = e.getX();
-        int my = e.getY();
+        mx = e.getX() - Game.cam.getX();
+        my = e.getY();
 
         if(Game.state == State.Menu) {
             if (mouseOver(GameMenu.play.getBounds(), e)) {
@@ -118,14 +124,6 @@ public class MouseInput implements MouseInputListener {
                 PausedMenu.exit.color = PausedMenu.exit.Default.darker();
             }else{
                 PausedMenu.exit.color = PausedMenu.exit.Default;
-            }
-        }else if(Game.state == State.Game){
-            dX = mx - Game.handler.getObjectById(ObjectId.Player).getX();
-            dY = my - Game.handler.getObjectById(ObjectId.Player).getY();
-            if(dX < 0){
-                Arm.angle = (float) Math.atan(dY/dX) + (float) Math.toRadians(180);
-            }else{
-                Arm.angle = (float) Math.atan(dY / dX);
             }
         }
     }

@@ -7,5 +7,6 @@ public enum ObjectId {
     Lava(),
     Coin(),
     Spikes(),
-    Arm()
+    Arm(),
+    Laser();
 }
