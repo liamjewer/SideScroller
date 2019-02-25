@@ -1,5 +1,6 @@
 package com.liam.scroller.framework;
 
+import com.liam.scroller.objects.Arm;
 import com.liam.scroller.objects.Player;
 import com.liam.scroller.window.Game;
 import com.liam.scroller.window.ObjectHandler;
@@ -23,7 +24,7 @@ public class KeyInput extends KeyAdapter {
             if (tempObject.getId() == ObjectId.Player) {
                 if(Game.state == State.Game) {
                     if (k == KeyEvent.VK_D || k == KeyEvent.VK_RIGHT) {
-                        tempObject.setVelX(5);
+                            tempObject.setVelX(5);
                         Player.lastFacing = true;
                     }
                     if (k == KeyEvent.VK_A || k == KeyEvent.VK_LEFT) {
@@ -38,6 +39,13 @@ public class KeyInput extends KeyAdapter {
                     }
                     if (k == KeyEvent.VK_ESCAPE) {
                         Game.state = State.Paused;
+                    }
+                    if(k == KeyEvent.VK_E){
+                        if(Arm.state == Arm.armState.holstered){
+                            Arm.state = Arm.armState.pulled;
+                        }else{
+                            Arm.state = Arm.armState.holstered;
+                        }
                     }
                 }else if(Game.state == State.Paused){
                     if (k == KeyEvent.VK_ESCAPE) {

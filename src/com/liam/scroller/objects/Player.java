@@ -81,18 +81,19 @@ public class Player extends GameObject {
         if(health <= 0){
             handler.respawn();
         }
-
-        dX = MouseInput.mx - x;
-        dY = MouseInput.my - y;
-        if(dX < 0){
-            Arm.angle = (float) Math.atan(dY/dX) + (float) Math.toRadians(180);
-        }else{
-            Arm.angle = (float) Math.atan(dY / dX);
+        if(Arm.state == Arm.armState.pulled) {
+            dX = MouseInput.mx - x;
+            dY = MouseInput.my - y;
+            if (dX < 0) {
+                Arm.angle = (float) Math.atan(dY / dX) + (float) Math.toRadians(180);
+            } else {
+                Arm.angle = (float) Math.atan(dY / dX);
+            }
+            hyp = (float) Math.sqrt(dX * dX + dY * dY);
+            scaleF = hyp / 23;
+            Laser.originX = Math.round(dX / scaleF) + arm.getX() + Texture.arm.getWidth() / 2;
+            Laser.originY = Math.round(dY / scaleF) + arm.getY() + Texture.arm.getHeight() / 2;
         }
-        hyp = (float) Math.sqrt(dX*dX + dY*dY);
-        scaleF = hyp/23;
-        Laser.originX = Math.round(dX/scaleF) + arm.getX() + Texture.arm.getWidth()/2;
-        Laser.originY = Math.round(dY/scaleF) + arm.getY() + Texture.arm.getHeight()/2;
 
         Collision(object);
         playerWalkRight.runAnimation();

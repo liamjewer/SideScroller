@@ -1,6 +1,7 @@
 package com.liam.scroller.window;
 
 import com.liam.scroller.framework.*;
+import com.liam.scroller.objects.Arm;
 import com.liam.scroller.objects.HUD;
 import com.liam.scroller.objects.Player;
 
@@ -162,7 +163,11 @@ public class Game extends Canvas implements Runnable {
                 }
             }
             Toolkit toolkit = Toolkit.getDefaultToolkit();
-            Window.frame.setCursor(toolkit.createCustomCursor(Texture.crosshair , new Point(0, 0), "img"));
+            if(Arm.state == Arm.armState.pulled) {
+                Window.frame.setCursor(toolkit.createCustomCursor(Texture.crosshair, new Point(0, 0), "img"));
+            }else{
+                Window.frame.setCursor(Cursor.getDefaultCursor());
+            }
         }
     }
 

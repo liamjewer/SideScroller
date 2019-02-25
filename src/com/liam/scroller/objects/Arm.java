@@ -12,6 +12,11 @@ import java.util.LinkedList;
 
 public class Arm extends GameObject {
     public static float angle;
+    public enum armState{
+        holstered,
+        pulled;
+    }
+    public static armState state = armState.holstered;
 
     Arm(float x, float y, ObjectId id) {
         super(x, y, id);
@@ -24,20 +29,16 @@ public class Arm extends GameObject {
 
     @Override
     public void render(Graphics g) {
-        // The required drawing location
-        int drawLocationX = (int)x;
-        int drawLocationY = (int)y;
-
-        // Rotation information
-
-        double rotationRequired = angle;
-        double locationX = Texture.arm.getWidth() / 2;
-        double locationY = Texture.arm.getHeight() / 2;
-        AffineTransform tx = AffineTransform.getRotateInstance(rotationRequired, locationX, locationY);
-        AffineTransformOp op = new AffineTransformOp(tx, AffineTransformOp.TYPE_BILINEAR);
-
-        // Drawing the rotated image at the required drawing locations
-        g.drawImage(op.filter(Texture.arm, null), drawLocationX, drawLocationY, null);
+        if(state == armState.pulled) {
+            int drawLocationX = (int) x;
+            int drawLocationY = (int) y;
+            double rotationRequired = angle;
+            double locationX = Texture.arm.getWidth() / 2;
+            double locationY = Texture.arm.getHeight() / 2;
+            AffineTransform tx = AffineTransform.getRotateInstance(rotationRequired, locationX, locationY);
+            AffineTransformOp op = new AffineTransformOp(tx, AffineTransformOp.TYPE_BILINEAR);
+            g.drawImage(op.filter(Texture.arm, null), drawLocationX, drawLocationY, null);
+        }
     }
 
     @Override
