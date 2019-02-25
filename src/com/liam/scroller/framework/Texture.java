@@ -6,9 +6,11 @@ import java.awt.image.BufferedImage;
 
 public class Texture {
     public static BufferedImage HUD;
-    SpriteSheet bs, ps;
+    public static BufferedImage crosshair;
+    SpriteSheet bs, ps, es;
     private BufferedImage block_sheet = null;
     BufferedImage player_sheet = null;
+    BufferedImage explosion_sheet = null;
     public static BufferedImage Portal = null;
     public static BufferedImage lives = null;
     public static BufferedImage coin = null;
@@ -20,15 +22,18 @@ public class Texture {
     public BufferedImage[] playerJump = new BufferedImage[8];
     public BufferedImage[] dangerBlock = new BufferedImage[2];
     public static BufferedImage[] background = new BufferedImage[3];
+    public static BufferedImage[] explosion = new BufferedImage[12];
 
     public Texture(){
         BufferedImageLoader loader = new BufferedImageLoader();
         block_sheet = loader.loadImage("/block_sheet.png");
         player_sheet = loader.loadImage("/player_sheet.png");
+        explosion_sheet = loader.loadImage("/explosion_sheet.png");
         Portal = loader.loadImage("/Portal.png");
         lives = loader.loadImage("/Lives.png");
         button = loader.loadImage("/Button.png");
         arm = loader.loadImage("/arm.png");
+        crosshair = loader.loadImage("/crosshair.png");
 
         background[0] = loader.loadImage("/clouds.png");
         background[1] = loader.loadImage("/mountains.png");
@@ -36,6 +41,7 @@ public class Texture {
 
         bs = new SpriteSheet(block_sheet);
         ps = new SpriteSheet(player_sheet);
+        es = new SpriteSheet(explosion_sheet);
         HUD = loader.loadImage("/HUD.png");
         
         getTextures();
@@ -64,5 +70,18 @@ public class Texture {
         dangerBlock[0] = bs.grabImage(1,2, 32, 32); //lava
         dangerBlock[1] = bs.grabImage(2,2, 32, 32); //spikes
         coin = bs.grabImage(1,3, 32, 32); //coin
+        explosion[0] = es.grabImage(1,1, 32, 32);
+        explosion[1] = es.grabImage(2,1, 32, 32);
+        explosion[2] = es.grabImage(3,1, 32, 32);
+        explosion[3] = es.grabImage(4,1, 32, 32);
+        explosion[4] = es.grabImage(5,1, 32, 32);
+        explosion[5] = es.grabImage(6, 1, 32, 32);
+        explosion[6] = es.grabImage(1,2, 32, 32);
+        explosion[7] = es.grabImage(2,2, 32, 32);
+        explosion[8] = es.grabImage(3,2, 32, 32);
+        explosion[9] = es.grabImage(4,2, 32, 32);
+        explosion[10] = es.grabImage(5,2, 32, 32);
+        explosion[11] = es.grabImage(6,2, 32, 32);
+
     }
 }

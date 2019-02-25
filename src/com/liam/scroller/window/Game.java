@@ -161,6 +161,8 @@ public class Game extends Canvas implements Runnable {
                     cam.tick(tempObject);
                 }
             }
+            Toolkit toolkit = Toolkit.getDefaultToolkit();
+            Window.frame.setCursor(toolkit.createCustomCursor(Texture.crosshair , new Point(0, 0), "img"));
         }
     }
 

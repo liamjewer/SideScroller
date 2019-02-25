@@ -48,8 +48,6 @@ public class Player extends GameObject {
         lastFacing = true;
         arm = new Arm(x - 7, y - 2, ObjectId.Arm);
         handler.addObject(arm);
-        laser = new Laser(0,0, ObjectId.Laser);
-        handler.addObject(laser);
 
         playerWalkRight = new Animation(4, texture.player[0], texture.player[1], texture.player[2], texture.player[3]);
         playerWalkLeft = new Animation(4, texture.player[7], texture.player[6], texture.player[5], texture.player[4]);
