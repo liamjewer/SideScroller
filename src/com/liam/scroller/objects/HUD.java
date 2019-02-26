@@ -8,6 +8,8 @@ import java.awt.geom.AffineTransform;
 import java.awt.image.AffineTransformOp;
 
 public class HUD {
+    private static int count = 0;
+
     public static void render(Graphics g){
         g.drawImage(Texture.HUD, Game.WIDTH/2 - 125, 0, null);
         g.setColor(Color.WHITE);
@@ -39,17 +41,29 @@ public class HUD {
             g.drawString("(Standard Issue)", Game.WIDTH - 62, 95);
             g.setColor(Color.GREEN);
             g.setFont(new Font("clip", Font.PLAIN, 30));
-            g.drawString("20", Game.WIDTH - 70, 130);
+            g.drawString(Integer.toString(Arm.ammo), Game.WIDTH - 70, 130);
             g.setColor(Color.BLACK);
             g.setFont(new Font("/", Font.PLAIN, 50));
             g.drawString("/", Game.WIDTH - 35, 145);
             g.setColor(new Color(0, 150, 0));
             g.setFont(new Font("reserve", Font.PLAIN, 15));
-            g.drawString("90", Game.WIDTH - 20, 140);
-            g.setColor(Color.GREEN);
+            g.drawString(Integer.toString(Arm.reserve), Game.WIDTH - 20, 140);
+            if(Arm.status == Arm.Status.loaded){
+                g.setColor(Color.GREEN);
+            }else{
+                if(count > 50 && count < 100) {
+                    g.setColor(Color.RED);
+                }else{
+                    g.setColor(Color.BLACK);
+                }
+                if(count == 100) count = 0;
+                count ++;
+            }
+
             g.setFont(new Font("status", Font.PLAIN, 15));
             g.drawString("status:", Game.WIDTH - 55, 170);
-            g.drawString("loaded", Game.WIDTH - 55, 190);
+            g.setFont(new Font("status", Font.BOLD, 10));
+            g.drawString(Arm.status.toString(), Game.WIDTH - 55, 190);
 
 
         }

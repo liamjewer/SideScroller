@@ -16,7 +16,7 @@ public class Laser extends GameObject {
     private Animation explosion;
 
     public static float originX, originY;
-    private boolean colided = false;
+    private boolean collided = false;
 
     public Laser(float x, float y, int life, ObjectId id) {
         super(x, y, id);
@@ -26,6 +26,7 @@ public class Laser extends GameObject {
         this.velX = Math.round((Player.dX/Player.scaleF));
         this.velY = Math.round((Player.dY/Player.scaleF));
         explosion = new Animation(1, Texture.explosion[0], Texture.explosion[5], Texture.explosion[10], Texture.explosion[11]);
+        Arm.ammo --;
     }
 
     @Override
@@ -46,21 +47,21 @@ public class Laser extends GameObject {
                     velX = 0;
                     velY = 0;
                     explosion.runAnimation();
-                    colided = true;
+                    collided = true;
                 }
             }else if(tempObject.getId() == ObjectId.Lava){
                 if(laserOver(tempObject.getBounds())){
                     velX = 0;
                     velY = 0;
                     explosion.runAnimation();
-                    colided = true;
+                    collided = true;
                 }
             }else if(tempObject.getId() == ObjectId.Spikes){
                 if(laserOver(tempObject.getBounds())){
                     velX = 0;
                     velY = 0;
                     explosion.runAnimation();
-                    colided = true;
+                    collided = true;
                 }
             }
         }
@@ -82,7 +83,7 @@ public class Laser extends GameObject {
     @Override
     public void render(Graphics g) {
         Graphics2D g2d = (Graphics2D)g;
-        if(colided) {
+        if(collided) {
             explosion.drawAnimation(g, (int)x - 16, (int)y - 16);
         }else {
             g.setColor(Color.GREEN);

@@ -47,6 +47,9 @@ public class KeyInput extends KeyAdapter {
                             Arm.state = Arm.armState.holstered;
                         }
                     }
+                    if(k == KeyEvent.VK_R){
+                        Arm.reload();
+                    }
                 }else if(Game.state == State.Paused){
                     if (k == KeyEvent.VK_ESCAPE) {
                         Game.state = State.Game;

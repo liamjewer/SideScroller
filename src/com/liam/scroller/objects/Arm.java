@@ -12,10 +12,18 @@ import java.util.LinkedList;
 
 public class Arm extends GameObject {
     public static float angle;
+    public static final int clip = 5;
+    public static int ammo = clip;
+    public static int reserve = clip * 3;
+
     public enum armState{
         holstered,
-        pulled;
+        pulled
     }
+    public enum Status{
+        loaded, empty_clip, no_reserve, no_ammo
+    }
+    public static Status status = Status.loaded;
     public static armState state = armState.holstered;
 
     Arm(float x, float y, ObjectId id) {
@@ -24,7 +32,10 @@ public class Arm extends GameObject {
 
     @Override
     public void tick(LinkedList<GameObject> object) {
-
+        if(ammo == 0 && reserve == 0) status = Status.no_ammo;
+        else if(reserve == 0) status = Status.no_reserve;
+        else if(ammo == 0) status = Status.empty_clip;
+        else if(ammo > 0 && reserve > 0) status = Status.loaded;
     }
 
     @Override
@@ -38,6 +49,16 @@ public class Arm extends GameObject {
             AffineTransform tx = AffineTransform.getRotateInstance(rotationRequired, locationX, locationY);
             AffineTransformOp op = new AffineTransformOp(tx, AffineTransformOp.TYPE_BILINEAR);
             g.drawImage(op.filter(Texture.arm, null), drawLocationX, drawLocationY, null);
+        }
+    }
+
+    public static void reload(){
+        if(reserve - (clip - ammo) < 0){
+            ammo += reserve;
+            reserve = 0;
+        }else {
+            reserve -= clip - ammo;
+            ammo = clip;
         }
     }
 

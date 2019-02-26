@@ -44,7 +44,7 @@ public class MouseInput implements MouseInputListener {
 
     @Override
     public void mousePressed(MouseEvent e) {
-        if(Game.state == State.Game){
+        if(Game.state == State.Game && Arm.state == Arm.armState.pulled && Arm.ammo != 0){
             laser = new Laser(0,0, 30, ObjectId.Laser);
             Game.handler.addObject(laser);
         }
