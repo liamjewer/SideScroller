@@ -25,7 +25,7 @@ public class Laser extends GameObject {
         this.life = life;
         this.velX = Math.round((Player.dX/Player.scaleF));
         this.velY = Math.round((Player.dY/Player.scaleF));
-        explosion = new Animation(1, Texture.explosion[0], Texture.explosion[1], Texture.explosion[2], Texture.explosion[3], Texture.explosion[4], Texture.explosion[5], Texture.explosion[6], Texture.explosion[7], Texture.explosion[8], Texture.explosion[9], Texture.explosion[10], Texture.explosion[11]);
+        explosion = new Animation(1, Texture.explosion[0], Texture.explosion[5], Texture.explosion[10], Texture.explosion[11]);
     }
 
     @Override
@@ -82,12 +82,13 @@ public class Laser extends GameObject {
     @Override
     public void render(Graphics g) {
         Graphics2D g2d = (Graphics2D)g;
-        g.setColor(Color.GREEN);
-        g2d.setStroke(new BasicStroke(3));
-        g.drawLine((int)x , (int)y,(int)(x + velX), (int)(y + velY));
-        g2d.setStroke(new BasicStroke(1));
         if(colided) {
             explosion.drawAnimation(g, (int)x - 16, (int)y - 16);
+        }else {
+            g.setColor(Color.GREEN);
+            g2d.setStroke(new BasicStroke(3));
+            g.drawLine((int) x, (int) y, (int) (x + velX), (int) (y + velY));
+            g2d.setStroke(new BasicStroke(1));
         }
     }
 

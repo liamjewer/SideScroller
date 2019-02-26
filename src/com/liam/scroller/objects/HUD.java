@@ -4,6 +4,8 @@ import com.liam.scroller.framework.Texture;
 import com.liam.scroller.window.Game;
 
 import java.awt.*;
+import java.awt.geom.AffineTransform;
+import java.awt.image.AffineTransformOp;
 
 public class HUD {
     public static void render(Graphics g){
@@ -18,6 +20,37 @@ public class HUD {
         g.drawRect(Game.WIDTH/2 - 100, 25, 200, 20);
         for(int i =0; i < Player.lives; i++){
             g.drawImage(Texture.lives, i * 21 + Game.WIDTH/2 - 50,50, null);
+        }
+        if(Arm.state == Arm.armState.pulled){
+            int drawLocationX = Game.WIDTH - Texture.HUD.getHeight();
+            int drawLocationY = 10;
+            double rotationRequired = Math.toRadians(90);
+            double locationX = Texture.HUD.getWidth() / 6.65;
+            double locationY = Texture.HUD.getHeight() / 2.0;
+            AffineTransform tx = AffineTransform.getRotateInstance(rotationRequired, locationX, locationY);
+            AffineTransformOp op = new AffineTransformOp(tx, AffineTransformOp.TYPE_BILINEAR);
+            g.drawImage(op.filter(Texture.HUD, null), drawLocationX, drawLocationY, null);
+
+            g.setColor(Color.GREEN);
+            g.drawString("laser Pistol", Game.WIDTH - 65, 85);
+            g.setFont(new Font("si", Font.PLAIN, 8));
+            g.setColor(Color.BLACK);
+            g.drawString("(Standard Issue)", Game.WIDTH - 62, 95);
+            g.setColor(Color.GREEN);
+            g.setFont(new Font("clip", Font.PLAIN, 30));
+            g.drawString("20", Game.WIDTH - 70, 130);
+            g.setColor(Color.BLACK);
+            g.setFont(new Font("/", Font.PLAIN, 50));
+            g.drawString("/", Game.WIDTH - 35, 145);
+            g.setColor(new Color(0, 150, 0));
+            g.setFont(new Font("reserve", Font.PLAIN, 15));
+            g.drawString("90", Game.WIDTH - 20, 140);
+            g.setColor(Color.GREEN);
+            g.setFont(new Font("status", Font.PLAIN, 15));
+            g.drawString("status:", Game.WIDTH - 55, 170);
+            g.drawString("loaded", Game.WIDTH - 55, 190);
+
+
         }
     }
 }
