@@ -60,7 +60,7 @@ public class ObjectHandler {
         int w = image.getWidth();
         int h = image.getHeight();
         clearLevel();
-
+        // TODO: 2019-02-25 add random spawns for ammo packs, health packs etc. 
         for(int xx = 0; xx < h; xx++){
             for(int yy = 0; yy < w; yy++){
                 int pixel = image.getRGB(xx, yy);

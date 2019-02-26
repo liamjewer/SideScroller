@@ -31,6 +31,7 @@ public class HUD {
             AffineTransformOp op = new AffineTransformOp(tx, AffineTransformOp.TYPE_BILINEAR);
             g.drawImage(op.filter(Texture.HUD, null), drawLocationX, drawLocationY, null);
 
+            // TODO: 2019-02-25 add proper values with clip and reserve variables enum gun status (loaded, clip empty, no more reserve, no ammo)
             g.setColor(Color.GREEN);
             g.drawString("laser Pistol", Game.WIDTH - 65, 85);
             g.setFont(new Font("si", Font.PLAIN, 8));
