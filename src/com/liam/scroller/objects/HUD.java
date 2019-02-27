@@ -57,7 +57,6 @@ public class HUD {
                     g.setColor(Color.BLACK);
                 }
                 if(count == 100) count = 0;
-                count ++;
             }
 
             g.setFont(new Font("status", Font.PLAIN, 15));

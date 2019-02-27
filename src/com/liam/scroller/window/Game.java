@@ -91,7 +91,12 @@ public class Game extends Canvas implements Runnable {
         Graphics g = bs.getDrawGraphics();
         Graphics2D g2d = (Graphics2D) g;
 
-        g.setColor(new Color(153, 204, 255));
+        Point2D start = new Point2D.Float(WIDTH/2, 0);
+        Point2D end = new Point2D.Float(WIDTH/2, HEIGHT);
+        float[] distL = {0.0f, 0.75f};
+        Color[] colorsL = {new Color(100, 100, 255), new Color(153, 204, 255)};
+        LinearGradientPaint pL = new LinearGradientPaint(start, end, distL, colorsL);
+        ((Graphics2D) g).setPaint(pL);
         g.fillRect(0, 0, getWidth(), getHeight());
 
         if(state == State.Game || state == State.Paused || state == State.Winner || state == State.GameOver) {
@@ -138,9 +143,6 @@ public class Game extends Canvas implements Runnable {
                 pMenu.render(g);
             }
         }else if(state == State.Menu){
-            handler.mid.render((Graphics2D) g);
-            handler.back.render((Graphics2D) g);
-            handler.front.render((Graphics2D) g);
             menu.render(g);
         }else if(state == State.Controls){
             handler.mid.render((Graphics2D) g);
@@ -153,6 +155,8 @@ public class Game extends Canvas implements Runnable {
     }
 
     private void tick() {
+        HEIGHT = Window.frame.getHeight();
+        WIDTH = Window.frame.getWidth();
         if(state == State.Game) {
             handler.tick();
             for (int i = 0; i < handler.object.size(); i++) {
@@ -165,9 +169,7 @@ public class Game extends Canvas implements Runnable {
             Toolkit toolkit = Toolkit.getDefaultToolkit();
             if(Arm.state == Arm.armState.pulled) {
                 Window.frame.setCursor(toolkit.createCustomCursor(Texture.crosshair, new Point(0, 0), "img"));
-            }else{
-                Window.frame.setCursor(Cursor.getDefaultCursor());
-            }
+            }else Window.frame.setCursor(Cursor.getDefaultCursor());
         }
     }
 

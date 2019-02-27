@@ -6,7 +6,7 @@ import java.awt.event.MouseListener;
 public class Button {
     private final ButtonID id;
     private int width, height;
-    private float x, y;
+    protected float x, y;
     private boolean filled;
     Color color, textColor, Default;
     String string;
