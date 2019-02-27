@@ -107,6 +107,7 @@ public class ObjectHandler {
     public void switchLevel() {
         Game.LEVEL++;
         getObjectById(ObjectId.Player).setVelX(0);
+        Player.pointsThisLevel = 0;
         if(Game.LEVEL <= levels.length) {
             loadImageLevel(levels[Game.LEVEL - 1]);
         }else{
@@ -115,10 +116,12 @@ public class ObjectHandler {
     }
 
     public void respawn(){
-        if(Player.lives != 0){
+        if(Player.lives > 0){
             clearLevel();
             loadImageLevel(levels[Game.LEVEL - 1]);
             Player.lives--;
+            Player.Points -= Player.pointsThisLevel;
+            Player.pointsThisLevel = 0;
         }else{
             Game.state = State.GameOver;
         }

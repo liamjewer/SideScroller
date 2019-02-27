@@ -22,7 +22,6 @@ public class Player extends GameObject {
     Texture texture = Game.getInstance();
     boolean showBounds = false;
     public static boolean lastFacing = true; //true is walking right false is walking left
-
     private Animation playerWalkRight;
     private Animation playerWalkLeft;
     private Animation playerJumpRight;
@@ -30,6 +29,7 @@ public class Player extends GameObject {
     public static int health = 100;
     public static int lives = 5;
     public static int Points = 0;
+    public static int pointsThisLevel = 0;
     private static boolean ismoving;
     public int lastX = 0;
     private Arm arm;
@@ -141,13 +141,14 @@ public class Player extends GameObject {
                 }
             }else if(tempObject.getId() == ObjectId.Spikes){
                 if(getBounds().intersects(tempObject.getBounds())) {
-                    handler.getObjectById(ObjectId.Player).setVelX(0);
-                    handler.getObjectById(ObjectId.Player).setVelY(0);
+                    handler.getObjectById(ObjectId.Player).setX(0);
+                    handler.getObjectById(ObjectId.Player).setY(0);
                     handler.respawn();
                 }
             }else if(tempObject.getId() == ObjectId.Coin){
                 if(getBounds().intersects(tempObject.getBounds())){
                     Points++;
+                    pointsThisLevel++;
                     handler.removeObject(tempObject);
                 }
             }
