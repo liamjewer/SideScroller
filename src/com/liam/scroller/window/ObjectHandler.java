@@ -85,6 +85,9 @@ public class ObjectHandler {
                     addObject(new Block(xx*32, yy*32, 2, ObjectId.Block));
                     if(xx > maxX) maxX = xx;
                 }
+                if (red == 0 && blue == 255 && green == 0){
+                    addObject(new Block(xx*32, yy*32, 1, ObjectId.Null_Block));
+                }
                 //danger Blocks
                 if(red == 255 && green == 0 && blue == 0){
                     addObject(new DangerBlock(xx*32, yy*32, 0, ObjectId.Lava));

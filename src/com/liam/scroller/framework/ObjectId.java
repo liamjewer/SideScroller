@@ -8,5 +8,6 @@ public enum ObjectId {
     Coin(),
     Spikes(),
     Arm(),
-    Laser();
+    Laser(),
+    Null_Block()
 }
