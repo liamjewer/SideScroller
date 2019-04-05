@@ -6,6 +6,7 @@ import com.liam.scroller.objects.HUD;
 import com.liam.scroller.objects.Player;
 
 import java.awt.*;
+import java.awt.event.KeyListener;
 import java.awt.geom.Point2D;
 import java.awt.image.BufferStrategy;
 import java.util.Random;
@@ -35,7 +36,7 @@ public class Game extends Canvas implements Runnable {
         texture = new Texture();
         handler = new ObjectHandler(cam);
         cam = new Camera(0, 0);
-        this.addKeyListener(new KeyInput(handler));
+        this.addKeyListener((KeyListener) new KeyInput(handler));
         this.addMouseListener(new MouseInput());
         this.addMouseMotionListener(new MouseInput());
     }
