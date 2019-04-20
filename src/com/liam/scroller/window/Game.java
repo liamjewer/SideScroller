@@ -25,6 +25,7 @@ public class Game extends Canvas implements Runnable {
     GameMenu menu = new GameMenu();
     ControlsMenu cMenu = new ControlsMenu();
     PausedMenu pMenu = new PausedMenu();
+    LevelMenu lMenu = new LevelMenu();
 
     Random r = new Random();
 
@@ -36,7 +37,7 @@ public class Game extends Canvas implements Runnable {
         texture = new Texture();
         handler = new ObjectHandler(cam);
         cam = new Camera(0, 0);
-        this.addKeyListener((KeyListener) new KeyInput(handler));
+        this.addKeyListener(new KeyInput(handler));
         this.addMouseListener(new MouseInput());
         this.addMouseMotionListener(new MouseInput());
     }
@@ -150,6 +151,8 @@ public class Game extends Canvas implements Runnable {
             handler.back.render((Graphics2D) g);
             handler.front.render((Graphics2D) g);
             cMenu.render(g);
+        }else if(state == State.SelectLevel){
+            lMenu.render(g);
         }
         g.dispose();
         bs.show();

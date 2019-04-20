@@ -5,5 +5,5 @@ public enum ButtonID {
     Resume(),
     Controls(),
     Exit(),
-    Menu()
+    one, two, three, four, Menu()
 }

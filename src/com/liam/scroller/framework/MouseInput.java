@@ -21,7 +21,7 @@ public class MouseInput implements MouseInputListener {
     public void mouseClicked(MouseEvent e) {
         if(Game.state == State.Menu) {
             if (mouseOver(GameMenu.play.getBounds(), e)) {
-                Game.state = State.Game;
+                Game.state = State.SelectLevel;
             } else if (mouseOver(GameMenu.exit.getBounds(), e)){
                 System.exit(0);
             }else if(mouseOver(GameMenu.controls.getBounds(), e)){
@@ -38,6 +38,19 @@ public class MouseInput implements MouseInputListener {
                 Game.state = State.Menu;
             }else if(mouseOver(PausedMenu.exit.getBounds(), e)){
                 System.exit(0);
+            }
+        }else if(Game.state == State.SelectLevel){
+            if (mouseOver(LevelMenu.one.getBounds(), e)) {
+                Game.state = State.Game;
+            } else if (mouseOver(LevelMenu.two.getBounds(), e)){
+                Game.state = State.Game;
+                Game.LEVEL = 2;
+            }else if(mouseOver(LevelMenu.three.getBounds(), e)){
+                Game.state = State.Game;
+                Game.LEVEL = 3;
+            }else if(mouseOver(LevelMenu.four.getBounds(), e)){
+                Game.state = State.Game;
+                Game.LEVEL = 4;
             }
         }
     }

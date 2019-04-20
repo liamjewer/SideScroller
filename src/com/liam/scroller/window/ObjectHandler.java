@@ -22,6 +22,7 @@ public class ObjectHandler {
     public ParallaxLayer mid;
     public ParallaxLayer back;
     public ParallaxLayer front;
+    private boolean startup = true;
 
 
     public ObjectHandler(Camera cam){
@@ -31,7 +32,6 @@ public class ObjectHandler {
         levels[1] = loader.loadImage("/level2.png"); //loading the level
         levels[2] = loader.loadImage("/level3.png"); //loading the level
         levels[3] = loader.loadImage("/level4.png"); //loading the level
-        loadImageLevel(levels[0]);
         mid = new ParallaxLayer(Texture.background[0], 0.5, 0, this); //clouds
         back = new ParallaxLayer(Texture.background[1], 0.3, 0, this); //mountains
         front = new ParallaxLayer(Texture.background[2], 0.7, 0, this); //hills
@@ -44,6 +44,10 @@ public class ObjectHandler {
             tempObject = object.get(i);
 
             tempObject.tick(object);
+        }
+        if(startup && Game.state == State.Game){
+            startup = false;
+            loadImageLevel(levels[Game.LEVEL - 1]);
         }
     }
 
