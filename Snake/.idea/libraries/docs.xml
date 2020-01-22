@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="docs">
+    <CLASSES />
+    <JAVADOC>
+      <root url="file://$PROJECT_DIR$/../../Libs/SimpleAudio-master/docs" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/../../Libs/SimpleAudio-master/src/main/java" />
+      <root url="file://$PROJECT_DIR$/../../Libs/SimpleAudio-master/src/test/java" />
+    </SOURCES>
+  </library>
+</component>

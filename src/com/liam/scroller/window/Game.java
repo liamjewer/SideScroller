@@ -6,7 +6,6 @@ import com.liam.scroller.objects.HUD;
 import com.liam.scroller.objects.Player;
 
 import java.awt.*;
-import java.awt.event.KeyListener;
 import java.awt.geom.Point2D;
 import java.awt.image.BufferStrategy;
 import java.util.Random;
